@@ -7,6 +7,7 @@ import About from './routes/About';
 import Home from './routes/Home';
 import Navigation from './components/Navigation';
 import Detail from './routes/Detail';
+import Header from './components/Header';
 
 // import logo from './logo.svg';
 // import './App.css';
@@ -15,6 +16,7 @@ function App() {
   return (
     <HashRouter>
       <Navigation />
+      <Header />
       <Route path="/" exact={true} component={Home} />
       <Route path="/about" component={About}/>
       <Route path="/movie-detail" component={Detail} />

@@ -8,6 +8,8 @@ import Home from './routes/Home';
 import Navigation from './components/Navigation';
 import Detail from './routes/Detail';
 import Header from './components/Header';
+import Suggestion from './components/Suggestion';
+import Suggestions from './components/Suggestions';
 
 // import logo from './logo.svg';
 // import './App.css';
@@ -16,10 +18,11 @@ function App() {
   return (
     <HashRouter>
       <Navigation />
-      <Header />
+      <Route path="/" exact={true} component={Header} />
       <Route path="/" exact={true} component={Home} />
       <Route path="/about" component={About}/>
       <Route path="/movie-detail" component={Detail} />
+      <Route path="/movie-detail" component={Suggestion} />
     </HashRouter>
   )
 }

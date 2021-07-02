@@ -1,17 +1,27 @@
 import React from 'react';
 import './Movie_detail.css';
+// import imgfile from '../img/tower.jpg';
+// import axios from 'axios';
+// import Suggestion from '../components/Suggestion';
+// import Suggestions from '../components/Suggestions';
 
 class Detail extends React.Component {
+
   componentDidMount() {
     const {location, history} = this.props;
     if (location.state===undefined) {
       history.push('/');
     }
+   
   }
+ 
   render() {
     const {location} = this.props;
+    // this.getSuggestions();
+    
     if(location.state) {
     return (
+      <section>
       <div className="movie__detail">
         <div className="detailbox1">
         <img src = {location.state.big_poster} alt = {location.state.title} title = {location.state.title} />
@@ -37,6 +47,12 @@ class Detail extends React.Component {
         </div>
         </div>
       </div>
+      {/* <div>
+        <Suggestions 
+        
+        />
+      </div> */}
+    </section>
     )
     } else {
       return null;

@@ -5,9 +5,9 @@
   left: 10px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: white;
   padding: 10px 20px;
-  /* box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025); */
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
   border-radius: 5px;
 }
 
@@ -22,7 +22,16 @@
 
 .nav a {
   text-decoration: none;
-  color: #424495;
+  color: #a29bfe;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: #6c5ce7;
   text-transform: uppercase;
   font-size: 12px;
   text-align: center;
@@ -87,9 +96,9 @@ body {
     margin: 0;
     border: 0;
     font-size: 18px;
-    position: relative;
-    top: 50%;
-    left: 50%;
+    position: absolute;
+    top: 15%;
+    left: 5%;
     margin-top: -25px;
     margin-left: -100px;
     width: 200px;
@@ -118,18 +127,19 @@ body {
 .b04_3d_tick a {
     position: absolute;
     text-align: center;
-    width: 50%;
+    width: 80%;
     height: 50px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     padding: 10px;
     border: #000000 solid 1px;
+    text-decoration: none;
 }
 
 .b04_3d_tick a:nth-child(1) {
     color: #000000;
-    background-color: #ffffff;
+    background-color: rgba(213, 213, 213, 0.3);
     transition: all 0.2s ease;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;

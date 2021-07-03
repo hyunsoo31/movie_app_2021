@@ -5,24 +5,12 @@ import './Navigation.css';
 function Navigation() {
   return (
     <div className="nav">
-      <div className="back">
-        <div class="button_base b04_3d_tick">
-        <a href ="https://hyunsoo31.github.io/">Intro</a>
-        <a href ="https://hyunsoo31.github.io/">Intro</a>
-        </div>
-      </div>
-      <div className="back">
-        <div class="button_base b04_3d_tick">
-        <Link to="/">Movie</Link>
-        <Link to="/">Movie</Link>
-        </div>
-      </div>
-      <div className="back">
-        <div class="button_base b04_3d_tick">
-        <Link to="/about">About</Link>
-        <Link to="/about">About</Link>
-        </div>
-      </div>
+      <Link to="/">Movie</Link>
+      <Link to="/about">About</Link>
+      <Link to="/">Test1</Link>
+      <Link to="/">Test2</Link>
+      <Link to="/">Test3</Link>
+      <Link to="/">Test4</Link>
     </div>
   )
 }

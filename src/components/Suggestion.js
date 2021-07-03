@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Suggestions from './Suggestions';
-import imgfile from '../img/tower.jpg';
+import imgfile from '../img/slate.jpg';
 
 
 class Suggestion extends React.Component{
@@ -35,41 +35,33 @@ class Suggestion extends React.Component{
     console.log({movies});
     console.log({test});
     return( 
-    <section className = "container">
+    <section className = "container_suggestion">
       {isLoading ? (
         <div>
           <h1>Suggestions</h1>
      <ul class="prod-list">
      <li>
        <img src= {imgfile} alt="" title="" /> 
-       <div class="caption">
+       <div class="caption2">
          <h2>movie 1</h2>
-         <p>summary</p>
-         <p>year</p>
        </div>
      </li>
      <li>
        <img src= {imgfile} alt="" title="" /> 
-       <div class="caption">
+       <div class="caption2">
          <h2>movie 2</h2>
-         <p>summary</p>
-         <p>year</p>
        </div>
      </li>
      <li>
        <img src= {imgfile} alt="" title="" /> 
-       <div class="caption">
+       <div class="caption2">
          <h2>movie 3</h2>
-         <p>summary</p>
-         <p>year</p>
        </div>
      </li>
      <li>
        <img src= {imgfile} alt="" title="" /> 
-       <div class="caption">
+       <div class="caption2">
          <h2>movie 4</h2>
-         <p>summary</p>
-         <p>year</p>
        </div>
      </li>
    </ul>
@@ -77,16 +69,20 @@ class Suggestion extends React.Component{
         ) : (
           <div>
             <h1>Suggestions</h1>
-          <div className="container">
+          <div className="movie__detail">
+          <div className="container_suggestion2">
           {movies.map((suggestion) => (
        <Suggestions
         key = {suggestion.id}
         id = {suggestion.id}
         title = {suggestion.title}
         poster = {suggestion.medium_cover_image}
+        year = {suggestion.year}
+        rating = {suggestion.rating}
       
       />
     ))}
+    </div>
     </div>
     </div>
       )}

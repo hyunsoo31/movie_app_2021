@@ -11,18 +11,30 @@ class Home extends React.Component {
     movies: [],
   };
 
-  getMovies = async () => {
+  onClickHandler(){
+    this.getMovies("download_count");
+  }
+  onClickHandler2(){
+    this.getMovies("like_count");
+  }
+  onClickHandler3(){
+    this.getMovies("rating");
+  }
+
+
+
+  getMovies = async (string) => {
     const{
       data: {
         data: {movies},
       },
-    } = await axios.get("https://yts.mx/api/v2/list_movies.json?sort_by=rating");
+    } = await axios.get("https://yts.mx/api/v2/list_movies.json?sort_by=" + string);
     this.setState({movies, isLoading: false});
   };
 
   componentDidMount() {
     // 영화 데이터 로딩!
-   this.getMovies();
+   this.getMovies("year");
   }
 
   render() {
@@ -35,6 +47,12 @@ class Home extends React.Component {
           <span className="loader__text">Loading...</span>
         </div>
         ) : (
+          <div>
+          <div className="button_menu">
+          <button onClick={() => this.onClickHandler()}>Download Count</button>
+          <button onClick={() => this.onClickHandler2()}>Like Count</button>
+          <button onClick={() => this.onClickHandler3()}>Rating</button>
+          </div>
           <div className="movies">
           {movies.map((movie) => (
        <Movie
@@ -52,6 +70,7 @@ class Home extends React.Component {
       />
     ))}
     </div>
+          </div>
       )}
     </section>
     );

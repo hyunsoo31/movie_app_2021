@@ -5,9 +5,9 @@
   left: 10px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
   padding: 10px 20px;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  /* box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025); */
   border-radius: 5px;
 }
 
@@ -22,7 +22,7 @@
 
 .nav a {
   text-decoration: none;
-  color: #0008fc;
+  color: #424495;
   text-transform: uppercase;
   font-size: 12px;
   text-align: center;
@@ -32,3 +32,137 @@
 .nav a:not(:last-child) {
   margin-bottom: 20px;
 }
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed'); */
+
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow-x: none;
+    background-color: #ffffff;
+   
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+.back {
+    width: 0;
+
+    float: left;
+    /* background-color: #eeeeee; */
+    border: 10px;
+    border-color: rgba(0, 0, 0, 0);
+    border-style: solid;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* counter-increment: bc; */
+    
+}
+
+.back:before {
+    /* content: counter(bc) "_"; */
+    position: absolute;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1260px) {
+    .back {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .back {
+        width: 100%;
+    }
+}
+
+.button_base {
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -100px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.button_base:hover {
+    cursor: pointer;
+}
+
+.b04_3d_tick {
+    perspective: 500px;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    perspective-origin: center top;
+    -webkit-perspective-origin: center top;
+    -moz-perspective-origin: center top;
+}
+
+.b04_3d_tick a {
+    position: absolute;
+    text-align: center;
+    width: 50%;
+    height: 50px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 10px;
+    border: #000000 solid 1px;
+}
+
+.b04_3d_tick a:nth-child(1) {
+    color: #000000;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+}
+
+.b04_3d_tick a:nth-child(2) {
+    color: #ffffff;
+    background-color: #000000;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+}
+
+.b04_3d_tick:hover a:nth-child(1) {
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.b04_3d_tick:hover a:nth-child(2) {
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+}
+
+

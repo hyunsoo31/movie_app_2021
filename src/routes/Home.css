@@ -1,11 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@300&display=swap');
+
+
 .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #dfe6e9;
+  
+}
+
+.container_suggestion {
   height: 100%;
   display: flex;
   justify-content: center;
   /* background-color: rgba(0, 0, 0, 1); */
   /* background-image: url(../img/tower.jpg); */
+  background-color: white;
 }
-
+.container_suggestion2 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* background-color: rgba(0, 0, 0, 1); */
+  /* background-image: url(../img/tower.jpg); */
+  background-color: black;
+}
 .loader {
   width: 100%;
   height: 100vh;
@@ -15,18 +34,84 @@
   font-weight: 300;
 }
 
+.loader__text {
+  font-family: 'Tourney', cursive;
+  font-weight: 600;
+  font-size: 3.5em;
+}
+
 .movies {
   display: grid;
-  grid-template-columns: repeat(2, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, minmax(400px, 2fr));
   grid-gap: 100px;
   padding: 50px;
-  width: 80%;
+  width: 85%;
   padding-top: 70px;
+  position: relative;
+  left: 100px;
 }
+
+
+/* 메뉴 버튼 */
+
+.button_menu {
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.4em;
+  
+}
+
+.button_menu:before{
+  content:'';
+ 
+  display:inline-block;
+  vertical-align:middle;
+}
+.button_menu button{
+  background:#2c3e50;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  width: 120px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.button_menu button:hover{
+  background:#fff;
+  color:#2c3e50;
+}
+.button_menu button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #2c3e50;
+  transition:400ms ease all;
+}
+.button_menu button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.button_menu button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
 
 @media screen and (max-width: 1090px) {
   .movies {
     grid-template-columns: 1fr;
-    width: 100%;
+    width: 50%;
   }
 }

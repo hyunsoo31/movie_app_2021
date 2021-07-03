@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 
-function Suggestions({id, title, poster}) {
+function Suggestions({id, title, poster, year, rating}) {
 //  console.log(title2);
 
   return (
@@ -14,8 +14,10 @@ function Suggestions({id, title, poster}) {
       <img src= {poster} alt="" title="" /> 
       <div class="caption">
         <h2>{title}</h2>
-        <p>summary</p>
-        <p>year</p>
+        <p>({year})</p>
+        <br></br>
+        <br></br>
+        <p>★ {rating}</p>
       </div>
     </li>
   </ul>
